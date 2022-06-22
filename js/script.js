@@ -29,6 +29,7 @@ const kilometri = document.getElementById('kilo')
 const età = document.getElementsByName("age")
 
 
+
 generaBiglietti.addEventListener('click', function () {
 
     const nome = nomePasseggero.value
@@ -37,14 +38,14 @@ generaBiglietti.addEventListener('click', function () {
     console.log(nome)
 
 
-    const kilo = kilometri.value
+    const kilo = (kilometri.value)
     console.log(kilo)
 
 
     let age = età.value
     console.log(age)
 
-    if 
+
 
 
 
