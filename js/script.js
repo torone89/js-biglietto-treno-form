@@ -17,17 +17,37 @@ console.log('JS OK');
 */
 
 
-const generaBiglietti = document.getElementById('prova')
+const generaBiglietti = document.getElementById('genera')
 console.log(generaBiglietti)
 
-// const nomePasseggero = document.getElementById('nome')
+const nomePasseggero = document.getElementById('nome')
 
-generaBiglietti.addEventListeliner('click', function () {
+const kilometri = document.getElementById('kilo')
 
-    const nomePasseggero = document.getElementById('nome').value
+// const stampoNome = document.getElementById('stamponomecompleto')
 
-    // const nome = nomePasseggero.value
-    console.log(nomePasseggero)
+const età = document.getElementsByName("age")
+
+
+generaBiglietti.addEventListener('click', function () {
+
+    const nome = nomePasseggero.value
+
+
+    console.log(nome)
+
+
+    const kilo = kilometri.value
+    console.log(kilo)
+
+
+    let age = età.value
+    console.log(age)
+
+    if 
+
+
+
 })
 
 
