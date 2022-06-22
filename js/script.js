@@ -3,22 +3,15 @@
 
 console.log('JS OK');
 
-/* 
+// START
 
-1 Creare una variabile per contenere Nome del passeggero
-2 Creare una variabile per contenere kilometri e chiedere all'utente il numero dei kilometri che vuole percorrere 
-3 Calcolo il totale del viaggio senza sconto
-4 Stampo il totale del viaggio senza sconto e inserisco html
-5 Calcolo Sconti del 20 % e del 60%
-6 Quando devo applicare lo sconto?
-7 Stampo gli sconti sul doc e inserisco un nuovo div
-8 Valdazione
-
-*/
-
+// CREO Variabili utilizzabili nel button e collego button alla listener
 
 const generaBiglietti = document.getElementById('genera')
 console.log(generaBiglietti)
+
+
+
 
 const nomePasseggero = document.getElementById('nome')
 
@@ -26,11 +19,12 @@ const kilometri = document.getElementById('kilo')
 
 // const stampoNome = document.getElementById('stamponomecompleto')
 
-const età = document.getElementById("age")
+const eta = document.getElementById("age")
 
 
 
 generaBiglietti.addEventListener('click', function () {
+
 
     const nome = nomePasseggero.value
 
@@ -38,11 +32,11 @@ generaBiglietti.addEventListener('click', function () {
     console.log(nome)
 
 
-    const kilo = (kilometri.value)
+    const kilo = parseInt((kilometri.value))
     console.log(kilo)
 
 
-    let age = età.value
+    let age = eta.value
     console.log(age)
 
 
@@ -62,29 +56,64 @@ generaBiglietti.addEventListener('click', function () {
     const saldoAnziani = totaleViaggio - (totaleViaggio * 0.4)
     console.log(saldoAnziani.toFixed(2))
 
+    let sconto
 
-    if (age == 'minorenni') { sconto = saldoMinori.toFixed(2) + " Euro" + " Hai diritto a uno sconto del 20% perchè sei minorenne" }
+    if (age == 'minorenne') { sconto = saldoMinori.toFixed(2) + " Euro" }
 
     else if (age == 'over65') {
-        sconto = saldoAnziani.toFixed(2) + " Euro" + " Hai diritto a uno sconto del 40% perchè sei un over 65 Anni"
+        sconto = saldoAnziani.toFixed(2) + " Euro"
 
     }
     else {
-        sconto = totaleViaggio + " Euro" + " Non puoi beneficiare di nessuno sconto"
+        sconto = "0"
 
     }
     console.log(sconto)
 
+    // FASE 6
+    // Generazione Random  Numero
+
+    const random = Math.floor(Math.random() * 8) + 1
+    console.log(random)
+
+    // GENERAZIONE ALFANUMERICA CODICE
+    const n = 5;
+    var T = [];
+    var pop = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < n; i++)
+        T.push(pop.charAt(Math.floor(Math.random() * pop.length)));
+
+    OT.innerHTML = T;
 
     // FASE 7 STAMPO
 
 
 
 
+    const total = document.getElementById('costodelbliglietto')
+    total.innerText = totaleViaggio
+    console.log(total);
+
+
+    const carro = document.getElementById('generaCarozza')
+    carro.innerText = random
+    console.log(carro);
+
+
+    const totalname = document.getElementById('nometotale')
+    totalname.innerText = nome
+    console.log(totalname);
+
+
+    const scontototale = document.getElementById('offerta')
+    scontototale.innerText = sconto
+    console.log(scontototale);
+
+
 
 
 
 })
-
 
 
