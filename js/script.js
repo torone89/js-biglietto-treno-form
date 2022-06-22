@@ -17,7 +17,8 @@ const nomePasseggero = document.getElementById('nome')
 
 const kilometri = document.getElementById('kilo')
 
-// const stampoNome = document.getElementById('stamponomecompleto')
+
+
 
 const eta = document.getElementById("age")
 
@@ -26,14 +27,22 @@ const eta = document.getElementById("age")
 generaBiglietti.addEventListener('click', function () {
 
 
-    const nome = nomePasseggero.value
 
+    const nome = nomePasseggero.value
 
     console.log(nome)
 
 
+
     const kilo = parseInt((kilometri.value))
     console.log(kilo)
+
+    //VALIDAZIONE KILOMETRI
+    if (!isNaN(kilo) && (kilo > 0 & kilo > 0)) { }
+    else {
+        alert("Inserisci un coretto formato , puoi inserire solo numeri e maggiori di zero")
+
+    }
 
 
     let age = eta.value
