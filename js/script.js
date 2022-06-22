@@ -26,7 +26,7 @@ const kilometri = document.getElementById('kilo')
 
 // const stampoNome = document.getElementById('stamponomecompleto')
 
-const età = document.getElementsByName("age")
+const età = document.getElementById("age")
 
 
 
@@ -44,6 +44,37 @@ generaBiglietti.addEventListener('click', function () {
 
     let age = età.value
     console.log(age)
+
+
+    // FASE 3
+    const totaleViaggio = kilo * 0.21
+    console.log(totaleViaggio)
+
+
+
+
+
+    // FASE 5
+
+    const saldoMinori = totaleViaggio - (totaleViaggio * 0.2)
+    console.log(saldoMinori.toFixed(2))
+
+    const saldoAnziani = totaleViaggio - (totaleViaggio * 0.4)
+    console.log(saldoAnziani.toFixed(2))
+
+
+    if (age == 'minorenni') { sconto = saldoMinori.toFixed(2) + " Euro" + " Hai diritto a uno sconto del 20% perchè sei minorenne" }
+
+    else if (age == 'over65') {
+        sconto = saldoAnziani.toFixed(2) + " Euro" + " Hai diritto a uno sconto del 40% perchè sei un over 65 Anni"
+
+    }
+    else {
+        sconto = totaleViaggio + " Euro" + " Non puoi beneficiare di nessuno sconto"
+
+    }
+    console.log(sconto)
+
 
 
 
