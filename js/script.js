@@ -76,6 +76,10 @@ generaBiglietti.addEventListener('click', function () {
     console.log(sconto)
 
 
+    // FASE 7 STAMPO
+
+
+
 
 
 
