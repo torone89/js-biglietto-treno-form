@@ -26,8 +26,16 @@
 }
 
 
+main {
+    background-color: brown;
+}
+
 
 
 /* *************************/
 /* Main */
 /* *************************/
+
+.title {
+    background-color: brown;
+}
