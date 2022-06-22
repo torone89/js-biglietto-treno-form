@@ -4,30 +4,18 @@
 
 /* Generic */
 
-.container {
-    background-color: aqua;
-    height: 800px;
 
-}
 
-.row {
-    border: 2px dashed yellow;
-}
 
-.row>[class^='col'] {
-    min-height: 100px;
-    background-color: blanchedalmond;
-    border: 1px gray solid;
-}
-
-.row .row>[class^='col'] {
-    background-color: orange;
-
-}
 
 
 main {
-    background-color: brown;
+    background-image: url(../img/backgorund.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+
 }
 
 
@@ -38,4 +26,16 @@ main {
 
 .title {
     background-color: brown;
+    padding: 23px;
+}
+
+.title-content {
+    background-color: aliceblue;
+    padding: 23px;
+}
+
+.title-content-second {
+    background-color: aliceblue;
+
+    padding: 23px;
 }
