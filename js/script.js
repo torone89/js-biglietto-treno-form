@@ -21,6 +21,7 @@ const generaBiglietti = document.getElementById('genera')
 const nomePasseggero = document.getElementById('nome')
 
 genera.addEventListeliner('click', function () {
-    const nome = nomePasseggero
+    const nome = nomePasseggero.value
+    console.log(nome)
 })
 
