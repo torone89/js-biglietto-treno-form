@@ -16,6 +16,11 @@ console.log('JS OK');
 
 */
 
+
+const generaBiglietti = document.getElementById('genera')
 const nomePasseggero = document.getElementById('nome')
-console.log(nomePasseggero)
+
+genera.addEventListeliner('click', function () {
+    const nome = nomePasseggero
+})
 
