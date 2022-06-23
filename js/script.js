@@ -6,36 +6,35 @@ console.log('JS OK');
 // START
 
 // CREO Variabili utilizzabili nel button e collego button alla listener
+//FORM ELEMENTS
 
 const generaBiglietti = document.getElementById('genera')
 console.log(generaBiglietti)
 
-
-
+const resetButton = document.getElementById('annulla')
+console.log(resetButton)
 
 const nomePasseggero = document.getElementById('nome')
 
 const kilometri = document.getElementById('kilo')
 
-
-
-
 const eta = document.getElementById("age")
-
 
 
 generaBiglietti.addEventListener('click', function () {
 
-
-
+    // RECUPERO I VALORI DEL FORM
     const nome = nomePasseggero.value
-
     console.log(nome)
-
-
 
     const kilo = parseInt((kilometri.value))
     console.log(kilo)
+
+    if (!generaBiglietti) { }
+    else {
+        alert("Inserisci un coretto formato , controlla il nome")
+
+    }
 
     //VALIDAZIONE KILOMETRI
     if (!isNaN(kilo) && (kilo > 0 & kilo > 0)) { }
@@ -44,20 +43,15 @@ generaBiglietti.addEventListener('click', function () {
 
     }
 
-
     let age = eta.value
     console.log(age)
 
-
-    // FASE 3
+    // FASE  COSTO VIAGGIO
     const totaleViaggio = kilo * 0.21
     console.log(totaleViaggio)
 
 
-
-
-
-    // FASE 5
+    // FASE   SCONTO
 
     const saldoMinori = totaleViaggio - (totaleViaggio * 0.2)
     console.log(saldoMinori.toFixed(2))
@@ -79,7 +73,7 @@ generaBiglietti.addEventListener('click', function () {
     }
     console.log(sconto)
 
-    // FASE 6
+    // FASE 
     // Generazione Random  Numero
 
     const random = Math.floor(Math.random() * 8) + 1
@@ -96,9 +90,6 @@ generaBiglietti.addEventListener('click', function () {
     OT.innerHTML = T;
 
     // FASE 7 STAMPO
-
-
-
 
     const total = document.getElementById('costodelbliglietto')
     total.innerText = totaleViaggio
@@ -119,10 +110,13 @@ generaBiglietti.addEventListener('click', function () {
     scontototale.innerText = sconto
     console.log(scontototale);
 
-
-
-
-
 })
 
+// ANNULLA  
 
+resetButton.addEventListener('click', function () {
+
+    nomePasseggero.value = ''
+    kilometri.value = ""
+    eta.value = ''
+})
