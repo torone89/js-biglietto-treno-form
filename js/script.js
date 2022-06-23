@@ -1,4 +1,3 @@
-
 // VERIFICA JS COLLEGATO
 
 console.log('JS OK');
@@ -30,11 +29,6 @@ generaBiglietti.addEventListener('click', function () {
     const kilo = parseInt((kilometri.value))
     console.log(kilo)
 
-    if (!generaBiglietti) { }
-    else {
-        alert("Inserisci un coretto formato , controlla il nome")
-
-    }
 
     //VALIDAZIONE KILOMETRI
     if (!isNaN(kilo) && (kilo > 0 & kilo > 0)) { }
@@ -109,7 +103,6 @@ generaBiglietti.addEventListener('click', function () {
     const scontototale = document.getElementById('offerta')
     scontototale.innerText = sconto
     console.log(scontototale);
-
 })
 
 // ANNULLA  
